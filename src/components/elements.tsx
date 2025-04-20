@@ -36,7 +36,7 @@ export default function SkillsSection() {
             animate="animate"
             exit="exit"
             transition={{ duration: 0.4 }}
-            className="grid md:grid-cols-2 gap-4"
+            className="grid sm:grid-cols-1 md:grid-cols-2 gap-4"
           >
             {skills.map((skill, i) => (
               <motion.div
@@ -69,9 +69,39 @@ export default function SkillsSection() {
             animate="animate"
             exit="exit"
             transition={{ duration: 0.4 }}
-            className="space-y-6 text-white"
+            className="space-y-6 sm:grid-cols-1 text-white"
           >
           <section className="w-full text-white space-y-6">
+                        {/* second experience */}
+
+                        <div className="max-w-6xl mx-auto">
+              {/*<h2 className="text-3xl font-bold mb-8">Experience</h2>*/}
+              <div className="space-y-6 pt-2">
+            
+                  <div className="border border-gray-700 p-5 rounded-md bg-[#252f5b] grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    {/* Left - Date */}
+                    <div className=" col-span-1 text-sm text-gray-400 font-bold">Feb 2018 - Aug 2019</div>
+      
+                    {/* Middle - Title + Company */}
+                    <div className=' col-span-1 '>
+                      <h3 className="text-lg font-semibold">Lecturer</h3>
+                      <p className="text-sm text-gray-400">Institute of Science Trade & Technology (ISTT)</p>
+                    </div>
+      
+                    {/* Right - Description */}
+                    <div className="col-span-2 text-sm text-gray-300 space-y-2">
+                    <h3 className="text-lg font-semibold mb-1 text-white">Role & Responsibilities</h3>
+                    <ul className="list-disc list-inside space-y-1 pl-2">
+                      <li>Conducting Lectures and Labs</li>
+                      <li>Supervision of Students</li>
+                      <li> Administrative Support</li>
+                      <li>Organizing Co-curricular Activities</li>
+                    </ul>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
             <div className="max-w-6xl mx-auto">
               {/*<h2 className="text-3xl font-bold mb-8">Experience</h2>*/}
               <div className="space-y-6">
@@ -84,35 +114,6 @@ export default function SkillsSection() {
                     <div className=' col-span-1 '>
                       <h3 className="text-lg font-semibold">Junior Software Engineer</h3>
                       <p className="text-sm text-gray-400">Astute Horse</p>
-                    </div>
-      
-                    {/* Right - Description */}
-                    <div className="col-span-2 text-sm text-gray-300 space-y-2">
-                    <h3 className="text-lg font-semibold mb-1 text-white">Role & Responsibilities</h3>
-                    <ul className="list-disc list-inside space-y-1 pl-2">
-                        <li>Developed and maintained backend code using PHP and MySQL to support web-based applications.</li>
-                        <li>Participated in writing clean, efficient, and reusable code to enhance system functionality.</li>
-                        <li>Performed troubleshooting and debugging to resolve software issues and ensure smooth application performance.</li>
-                        <li>Collaborated with the development team to support ongoing feature enhancements and codebase maintenance.</li>
-                    </ul>
-                    </div>
-                  </div>
-              </div>
-            </div>
-            {/* second experience */}
-
-            <div className="max-w-6xl mx-auto">
-              {/*<h2 className="text-3xl font-bold mb-8">Experience</h2>*/}
-              <div className="space-y-6 pt-2">
-            
-                  <div className="border border-gray-700 p-5 rounded-md bg-[#252f5b] grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {/* Left - Date */}
-                    <div className=" col-span-1 text-sm text-gray-400 font-bold">Feb 2018 - Aug 2019</div>
-      
-                    {/* Middle - Title + Company */}
-                    <div className=' col-span-1 '>
-                      <h3 className="text-lg font-semibold">Lecturer</h3>
-                      <p className="text-sm text-gray-400">Institute of Science Trade & Technology (ISTT)</p>
                     </div>
       
                     {/* Right - Description */}
@@ -142,7 +143,7 @@ export default function SkillsSection() {
             animate="animate"
             exit="exit"
             transition={{ duration: 0.4 }}
-            className="text-gray-300 space-y-4 bg-[#252f5b] p-4 rounded-lg shadow-md"
+            className="text-gray-300 space-y-4 sm:grid-cols-1 bg-[#252f5b] p-4 rounded-lg shadow-md"
           >
             <h3 className="text-2xl font-bold text-white">
               Bachelor of Science in Computer Science and Engineering
@@ -162,7 +163,7 @@ export default function SkillsSection() {
             animate="animate"
             exit="exit"
             transition={{ duration: 0.4 }}
-            className="space-y-6"
+            className="space-y-6 sm:grid-cols-1"
           >
            <section className="space-y-6">
             <div className="text-gray-300 bg-[#252f5b] p-4 rounded-lg shadow-md space-y-4">
@@ -205,14 +206,14 @@ export default function SkillsSection() {
     <section className="w-full bg-[#040d5c] text-white py-12 px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Tabs */}
-        <div className="flex md:flex-col gap-4">
+        <div className="grid sm:grid-cols-1 md:grid-col gap-4">
           {sections.map((section) => (
             <motion.button
               key={section}
               onClick={() => setActiveTab(section)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className={`py-2 px-4 rounded-full text-xl font-medium transition-all duration-200 ${
+              className={`py-2 px-4 rounded-full text-xl font-medium transition-all duration-200 sm:grid-cols-1 ${
                 activeTab === section
                   ? 'bg-blue-600 text-white'
                   : 'bg-[#252f5b] text-gray-300 hover:bg-gray-700'

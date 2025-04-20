@@ -1,8 +1,6 @@
 
 'use client';
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
 
 export default function SkillsSection() {
   const [activeTab, setActiveTab] = useState('Skills');
@@ -23,7 +21,7 @@ export default function SkillsSection() {
       ];
 
       return (
-        <div className="grid md:grid-cols-2 gap-4">
+        <div className="sm:col-span-1 grid md:grid-cols-2 gap-4">
           {skills.map((skill) => (
             <div key={skill.name} className="bg-[#252f5b] p-4 rounded-lg shadow-md">
               <div className="flex justify-between items-center mb-2">
@@ -92,10 +90,10 @@ export default function SkillsSection() {
                 <div className="col-span-2 text-sm text-gray-300 space-y-2">
                 <h3 className="text-lg font-semibold mb-1 text-white">Role & Responsibilities</h3>
                 <ul className="list-disc list-inside space-y-1 pl-2">
-                    <li>Developed and maintained backend code using PHP and MySQL to support web-based applications.</li>
-                    <li>Participated in writing clean, efficient, and reusable code to enhance system functionality.</li>
-                    <li>Performed troubleshooting and debugging to resolve software issues and ensure smooth application performance.</li>
-                    <li>Collaborated with the development team to support ongoing feature enhancements and codebase maintenance.</li>
+                    <li>Conducting Lectures and Labs</li>
+                    <li>Supervision of Students</li>
+                    <li> Administrative Support</li>
+                    <li>Organizing Co-curricular Activities</li>
                 </ul>
                 </div>
               </div>
@@ -159,7 +157,7 @@ export default function SkillsSection() {
     <section className="w-full bg-[#040d5c] text-white py-12 px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Left Side*/}
-        <div className="flex md:flex-col gap-4">
+        <div className="grid sm:grid-cols-1 md:grid-col gap-4">
           {sections.map((section) => (
             <button
               key={section}

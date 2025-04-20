@@ -47,15 +47,18 @@ export default function Resume() {
           variants={fadeInUp}
           className="col-span-1 flex justify-center items-start"
         >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.97 }}
+          <a
+            href="/HABIBA.pdf" 
+            download
             className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-full text-white font-bold text-xl transition duration-300 shadow-md mt-20"
           >
-            Download Resume
-          </motion.button>
+            <motion.span whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
+              Download Resume
+            </motion.span>
+          </a>
         </motion.div>
-      </motion.div>
+        </motion.div>
+      
     </section>
   );
 }

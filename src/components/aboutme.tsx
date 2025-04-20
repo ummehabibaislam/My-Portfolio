@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const container = {
   hidden: {},
@@ -47,22 +48,24 @@ export default function About() {
       >
         {/* Image*/}
         <motion.div
-          className="col-span-1 h-[300px] flex items-center justify-center"
+          className="sm:col-span-1 h-[300px] flex items-center justify-center sm:pb-4"
           variants={zoomIn}
         >
-          <img
+          <Image
             src="/img/tanni.png"
-            alt="Umme Habiba Islam"
-            className="h-full object-contain"
+            alt="Tanni"
+            width={200}
+            height={200}
+            unoptimized
           />
         </motion.div>
 
         {/* Text */}
         <motion.div
-          className="col-span-2 text-left space-y-6"
+          className="sm:col-span-2 text-left space-y-6 pt-10"
           variants={fadeUp}
         >
-          <h3 className="text-lg font-semibold text-gray-300">
+          <h3 className="text-lg font-semibold text-gray-300 ">
             Let’s Get In Touch With Me!
           </h3>
 
